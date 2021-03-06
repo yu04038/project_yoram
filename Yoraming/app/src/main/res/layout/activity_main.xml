@@ -1,10 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".MainActivity">
+    tools:context=".UI.activity.MainActivity">
 
-</LinearLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_marginTop="25dp"
+            android:layout_width="130dp"
+            android:layout_height="31dp"
+            android:layout_gravity="left"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_logo" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_gravity="left"
+            android:src="@drawable/home_not_selected" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="right"
+            android:background="@android:color/transparent"
+            android:src="@drawable/home_not_selected" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:layout_gravity="bottom"
+            android:background="#BFBBBB" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageButton
+            android:id="@+id/tab_home"
+            android:layout_width="28dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/tab_home_selected"
+            android:scaleType="fitCenter" />
+
+
+        <ImageButton
+            android:id="@+id/tab_detail"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="25dp"
+            android:background="@drawable/tab_detail_selected"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/tab_yoraming"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="35dp"
+            android:background="@drawable/tab_yoraming_selected"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/tab_mypage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="25dp"
+            android:background="@drawable/tab_mypage_selected"
+            android:scaleType="fitXY" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
